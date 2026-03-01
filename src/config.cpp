@@ -408,7 +408,7 @@ void JDFixer::GameplaySettings(UnityEngine::GameObject* gameObject, bool firstAc
         float decimalIncrement = 1.0 / pow(10, getModConfig().Decimals.GetValue());
 
         durationSlider = BSML::Lite::CreateSliderSetting(
-            mainVertical, "Half Jump Duration", decimalIncrement, currentAppliedValues.GetMainValue(), 0.1, 2.5, 0, true, {}, [](float value) {
+            mainVertical, "Half Jump Duration", decimalIncrement, currentAppliedValues.GetMainValue(), 0.1, 10.0, 0, true, {}, [](float value) {
                 if (!currentAppliedValues.GetUseDuration())
                     return;
                 currentAppliedValues.SetMainValue(value);
